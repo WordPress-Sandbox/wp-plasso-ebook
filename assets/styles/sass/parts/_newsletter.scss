@@ -1,0 +1,48 @@
+
+/* Newsletter
+---------------------------------------------------------------------------------------------------- */
+
+.newsletter {
+	background-color: #363b43;
+	text-align: center;
+	color: $grey4;
+
+	.content {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h5 {
+		color: $grey4;
+		margin-bottom: 20px;
+	}
+	
+	input[type="email"] {
+		color: white;
+		font-family: $sans-serif;
+		font-size:14px;
+		background: $grey2;
+		padding: 15px 20px !important;
+		width: 300px;
+		border: 0;
+		margin-right: 10px;
+		border-radius: 3px;
+	}
+
+	button {
+		font-family: $sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		color: #fff;
+		background-color: $dark-ocean;
+		padding: 15px 30px;
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: $ocean;
+		@include transition1;
+	}
+}

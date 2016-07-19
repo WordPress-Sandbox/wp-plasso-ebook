@@ -1,0 +1,43 @@
+
+/* Header
+---------------------------------------------------------------------------------------------------- */
+
+header {
+	background-color: white;
+	overflow: hidden;
+
+	.content {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.logo {
+		float: left;
+		font-size: 36px;
+		font-weight: 300;
+
+		img {
+			height: 40px;
+		}
+	}
+
+	h5 {
+		color: $grey4;
+	}
+	
+	@include large-shadow;
+}
+
+// Navigation
+
+ul.nav {
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 15px;
+	float: right;
+	list-style: none;
+	li {
+		display: inline;
+		margin: 0 0 0 30px;
+	}
+}

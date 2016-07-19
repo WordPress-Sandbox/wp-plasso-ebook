@@ -1,0 +1,116 @@
+
+/* Universals
+---------------------------------------------------------------------------------------------------- */
+
+.index {
+	.section-title {
+		margin-bottom: 15px;
+	}
+	
+	.section-desc {
+		color: $grey4;
+	}
+
+	.section-divider {
+		max-width: 200px;
+		border-top: 2px solid $grey6;
+		margin: 40px auto 80px;
+	}
+
+	.grid {
+		img {
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.7;
+			color: $grey4;
+		}
+	}
+}
+
+/* Book Hero
+---------------------------------------------------------------------------------------------------- */
+
+.ebook-hero {
+	.col-1-2 {
+		h2 {
+			margin-bottom: 20px;
+		}
+
+		h5 {
+			font-size: 16px;
+			color: $grey4;
+			margin-bottom: 40px;
+		}
+
+		.text {
+			padding: 150px 0;
+		}
+
+		.btn {
+			font-size: 18px;
+		}
+	}
+}
+
+/* Book Info
+---------------------------------------------------------------------------------------------------- */
+
+.book-info {
+	background-color: white;
+	text-align: center;
+
+	img {
+		max-width: 100%;
+
+		margin-bottom: 20px;
+	}
+}
+
+/* Testimonials
+---------------------------------------------------------------------------------------------------- */
+
+.testimonials {
+	text-align: center;
+
+	.profile {
+		background-color: $grey6;
+
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		border-radius: 50%;
+
+		width: 100px;
+		height: 100px;
+
+		margin-left: calc(50% - 50px);
+		margin-bottom: 30px;
+	}
+}
+
+/* Book Author
+---------------------------------------------------------------------------------------------------- */
+
+.author {
+	background-color: $grey6;
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	p {
+		margin-bottom: 25px;
+	}
+
+	.signature {
+		max-width: 187px;
+	}
+}
