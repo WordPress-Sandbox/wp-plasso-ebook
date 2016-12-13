@@ -9,19 +9,19 @@ function plasso_customizer() {
 
 	$wp_customize->remove_section('static_front_page');
 
-    /* Yes Kirki? Cool, let’s do this.
-    ------------------------------------------------------------------------------------------------ */
+  /* Yes Kirki? Cool, let’s do this.
+  ------------------------------------------------------------------------------------------------ */
 
 	if(class_exists('Kirki')) {
 
-        // Theme configuration for Kirki.
+    // Theme configuration for Kirki.
 		Kirki::add_config('plasso_theme', array(
 			'capability' => 'edit_theme_options',
 			'option_type' => 'theme_mod',
 		));
 
 		/* The Product Section
-        -------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('product_section', array(
 			'title' => __('Product Settings', 'plasso_textdomain'),
@@ -30,12 +30,12 @@ function plasso_customizer() {
 			'capability' => 'edit_theme_options',
 		));
 
-        // Product: For the Plasso product ID.
+    // Product: For the Plasso product ID.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[space_id]',
 			'label' => __('Space ID', 'plasso_textdomain'),
-            'description' => __('You’ll find your space ID at the end of your space URL when viewing your space on Plasso.co. For instance, if your space URL is <strong>https://plasso.co/s/zZ2NwPCfyU</strong>, your space ID would be <strong>zZ2NwPCfyU</strong>.'),
+      'description' => __('You’ll find your space ID at the end of your space URL when viewing your space on Plasso.com. For instance, if your space URL is <strong>https://plasso.com/s/zZ2NwPCfyU</strong>, your space ID would be <strong>zZ2NwPCfyU</strong>.'),
 			'section' => 'product_section',
 			'type' => 'text',
 			'priority' => 10,
@@ -46,14 +46,14 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[product_price]',
 			'label' => __('Price', 'plasso_textdomain'),
-            'description' => __('Add a price to your “Buy Now” button (e.g. “$49”).'),
+      'description' => __('Add a price to your “Buy Now” button (e.g. “$49”).'),
 			'section' => 'product_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-        /* The Header Section
-        -------------------------------------------------------------------------------------------- */
+    /* The Header Section
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('header_section', array(
 			'title' => __('Header', 'plasso_textdomain'),
@@ -67,29 +67,29 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[header_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the header section on or off.'),
+      'description' => __('Toggle the header section on or off.'),
 			'section' => 'header_section',
 			'type' => 'toggle',
 			'priority' => 10,
 		));
 
-        // Text: The header text.
+    // Text: The header text.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[header_text]',
 			'label' => __('Text', 'plasso_textdomain'),
-            'description' => __('Add some header text.'),
+      'description' => __('Add some header text.'),
 			'section' => 'header_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-        // Logo Image: The header logo image.
+    // Logo Image: The header logo image.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[header_logo]',
 			'label' => __('Logo', 'plasso_textdomain'),
-            'description' => __('Add a logo image (replaces the default text-based logo.)'),
+      'description' => __('Add a logo image (replaces the default text-based logo.)'),
 			'section' => 'header_section',
 			'type' => 'image',
 			'priority' => 10,
@@ -97,13 +97,13 @@ function plasso_customizer() {
 
 		// Menu Repeater: Building the header menu.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[header_menu]',
 			'label' => __('Menu', 'plasso_textdomain'),
-            'description' => __('Add, remove and/or organize links to pages.'),
-            'row_label' => array(
-                 'value' => 'menu item'
-            ),
+      'description' => __('Add, remove and/or organize links to pages.'),
+      'row_label' => array(
+      	'value' => 'menu item'
+      ),
 			'section' => 'header_section',
 			'type' => 'repeater',
 			'priority' => 10,
@@ -112,15 +112,15 @@ function plasso_customizer() {
 					'label' => __('Title', 'plasso_textdomain'),
 					'type' => 'text',
 				),
-                'page' => array(
+	      'page' => array(
 					'label' => __('Page', 'plasso_textdomain'),
 					'type' => 'dropdown-pages',
 				),
 			),
 		));
 
-        /* The Book Intro Section
-        -------------------------------------------------------------------------------------------- */
+    /* The Book Intro Section
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('intro_section', array(
 			'title' => __('Book Intro', 'plasso_textdomain'),
@@ -134,7 +134,7 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[intro_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the intro section on or off.'),
+      'description' => __('Toggle the intro section on or off.'),
 			'section' => 'intro_section',
 			'type' => 'toggle',
 			'priority' => 10,
@@ -142,10 +142,10 @@ function plasso_customizer() {
 
 		// Book Image: The intro book image.
 
-        Kirki::add_field( 'plasso_theme', array(
+    Kirki::add_field( 'plasso_theme', array(
 			'settings' => 'plasso[intro_image]',
 			'label' => __('Book Image', 'plasso_textdomain'),
-            'description' => __('The book image for your intro.'),
+      'description' => __('The book image for your intro.'),
 			'section' => 'intro_section',
 			'type' => 'image',
 			'priority' => 10,
@@ -156,25 +156,25 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[intro_title]',
 			'label' => __('Intro Title', 'plasso_textdomain'),
-            'description' => __('Just enter a bit of text for your intro title.'),
+      'description' => __('Just enter a bit of text for your intro title.'),
 			'section' => 'intro_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-        // Intro Tagline: Just a textarea for the intro tagline.
+    // Intro Tagline: Just a textarea for the intro tagline.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[intro_tagline]',
 			'label' => __('Intro Tagline', 'plasso_textdomain'),
-            'description' => __('Just enter a bit of text for your intro tagline.'),
+      'description' => __('Just enter a bit of text for your intro tagline.'),
 			'section' => 'intro_section',
 			'type' => 'textarea',
 			'priority' => 10,
 		));
 
-        /* The Features Section
-        -------------------------------------------------------------------------------------------- */
+    /* The Features Section
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('features_section', array(
 			'title' => __('Features', 'plasso_textdomain'),
@@ -183,29 +183,29 @@ function plasso_customizer() {
 			'capability' => 'edit_theme_options',
 		));
 
-        // Features Toggle: Toggle the features section on or off.
+    // Features Toggle: Toggle the features section on or off.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[features_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the features section on or off.'),
+      'description' => __('Toggle the features section on or off.'),
 			'section' => 'features_section',
 			'type' => 'toggle',
 			'priority' => 10,
 		));
 
-        // Features Intro Headline: Just a textarea for the features intro headline.
+  	// Features Intro Headline: Just a textarea for the features intro headline.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[features_intro_headline]',
 			'label' => __('Features Headline', 'plasso_textdomain'),
-            'description' => __('For your features intro headline.'),
+      'description' => __('For your features intro headline.'),
 			'section' => 'features_section',
 			'type' => 'textarea',
 			'priority' => 10,
 		));
 
-        // Features Intro Text: Just a textarea for the features intro text.
+    // Features Intro Text: Just a textarea for the features intro text.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[features_intro_text]',
@@ -216,15 +216,15 @@ function plasso_customizer() {
 			'priority' => 10,
 		));
 
-        // Features Repeater: Here’s the features repeater for the actual book features.
+    // Features Repeater: Here’s the features repeater for the actual book features.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[features_feature]',
 			'label' => __('Product Features', 'plasso_textdomain'),
-            'description' => __('Add, remove and/or organize features.'),
-            'row_label' => array(
-                 'value' => 'feature'
-            ),
+      'description' => __('Add, remove and/or organize features.'),
+      'row_label' => array(
+        'value' => 'feature'
+      ),
 			'section' => 'features_section',
 			'type' => 'repeater',
 			'priority' => 10,
@@ -245,7 +245,7 @@ function plasso_customizer() {
 		));
 
 		/* The Testimonials Section
-        -------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('testimonials_section', array(
 			'title' => __('Testimonials', 'plasso_textdomain'),
@@ -254,12 +254,12 @@ function plasso_customizer() {
 			'capability' => 'edit_theme_options',
 		));
 
-        // Testimonials Toggle: Toggle the testimonials section on or off.
+    // Testimonials Toggle: Toggle the testimonials section on or off.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[testimonials_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the testimonials section on or off.'),
+      'description' => __('Toggle the testimonials section on or off.'),
 			'section' => 'testimonials_section',
 			'type' => 'toggle',
 			'priority' => 10,
@@ -270,32 +270,32 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[testimonials_intro_headline]',
 			'label' => __('Testimonials Headline', 'plasso_textdomain'),
-            'description' => __('For your testimonials intro headline.'),
+      'description' => __('For your testimonials intro headline.'),
 			'section' => 'testimonials_section',
 			'type' => 'textarea',
 			'priority' => 10,
 		));
 
-        // Testimonials Intro Text: Just a textarea for the features intro text.
+    // Testimonials Intro Text: Just a textarea for the features intro text.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[testimonials_intro_text]',
 			'label' => __('Testimonials Tagline', 'plasso_textdomain'),
-            'description' => __('For your testimonials intro text.'),
+      'description' => __('For your testimonials intro text.'),
 			'section' => 'testimonials_section',
 			'type' => 'textarea',
 			'priority' => 10,
 		));
 
-        // Testimonails Repeater: Here’s the testimonials repeater.
+    // Testimonails Repeater: Here’s the testimonials repeater.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[testimonials_testimonial]',
 			'label' => __('Testimonails', 'plasso_textdomain'),
-            'description' => __('Add, remove and/or organize testimonials.'),
-            'row_label' => array(
-                 'value' => 'testimonial'
-            ),
+      'description' => __('Add, remove and/or organize testimonials.'),
+      'row_label' => array(
+           'value' => 'testimonial'
+      ),
 			'section' => 'testimonials_section',
 			'type' => 'repeater',
 			'priority' => 10,
@@ -316,7 +316,7 @@ function plasso_customizer() {
 		));
 
 		/* The Book Author Section
-        -------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('author_section', array(
 			'title' => __('Book Author', 'plasso_textdomain'),
@@ -330,7 +330,7 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[author_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the author section on or off.'),
+      'description' => __('Toggle the author section on or off.'),
 			'section' => 'author_section',
 			'type' => 'toggle',
 			'priority' => 10,
@@ -338,10 +338,10 @@ function plasso_customizer() {
 
 		// Author Image: The author image.
 
-        Kirki::add_field( 'plasso_theme', array(
+  	Kirki::add_field( 'plasso_theme', array(
 			'settings' => 'plasso[author_image]',
 			'label' => __('Author Image', 'plasso_textdomain'),
-            'description' => __('The author image.'),
+      'description' => __('The author image.'),
 			'section' => 'author_section',
 			'type' => 'image',
 			'priority' => 10,
@@ -352,18 +352,18 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[author_title]',
 			'label' => __('Author Title', 'plasso_textdomain'),
-            'description' => __('Just enter a bit of text for your author title.'),
+      'description' => __('Just enter a bit of text for your author title.'),
 			'section' => 'author_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-        // Author Text: Just a textarea for the author section.
+    // Author Text: Just a textarea for the author section.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[author_text]',
 			'label' => __('Author Text', 'plasso_textdomain'),
-            'description' => __('Just enter a bit of text about the author.'),
+      'description' => __('Just enter a bit of text about the author.'),
 			'section' => 'author_section',
 			'type' => 'textarea',
 			'priority' => 10,
@@ -371,17 +371,17 @@ function plasso_customizer() {
 
 		// Author Signature: The author signature.
 
-        Kirki::add_field( 'plasso_theme', array(
+    Kirki::add_field( 'plasso_theme', array(
 			'settings' => 'plasso[author_signature]',
 			'label' => __('Signature', 'plasso_textdomain'),
-            'description' => __('Add a signature image if you have one.'),
+      'description' => __('Add a signature image if you have one.'),
 			'section' => 'author_section',
 			'type' => 'image',
 			'priority' => 10,
 		));
 
-        /* Newsletter
-        -------------------------------------------------------------------------------------------- */
+    /* Newsletter
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('newsletter_section', array(
 			'title' => __('Newsletter', 'plasso_textdomain'),
@@ -390,52 +390,52 @@ function plasso_customizer() {
 			'capability' => 'edit_theme_options',
 		));
 
-        // Newsletter Toggle: Toggle the newsletter section on or off.
+    // Newsletter Toggle: Toggle the newsletter section on or off.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[newsletter_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the newsletter section on or off.'),
+      'description' => __('Toggle the newsletter section on or off.'),
 			'section' => 'newsletter_section',
 			'type' => 'toggle',
 			'priority' => 10,
 		));
 
-        // Newsletter Text: The text displayed above the newsletter form.
+    // Newsletter Text: The text displayed above the newsletter form.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[newsletter_text]',
 			'label' => __('Text', 'plasso_textdomain'),
-            'description' => __('Some call to action text (e.g. “Subscribe to our newsletter to stay updated.”).'),
+      'description' => __('Some call to action text (e.g. “Subscribe to our newsletter to stay updated.”).'),
 			'section' => 'newsletter_section',
 			'type' => 'textarea',
 			'priority' => 10,
 		));
 
-        // MailChimp API: For the MailChimp API key.
+    // MailChimp API: For the MailChimp API key.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[newsletter_api]',
 			'label' => __('MailChimp API Key', 'plasso_textdomain'),
-            'description' => __('Add your <a href="http://kb.mailchimp.com/integrations/api/about-api-keys" target="_blank">MailChimp API Key</a> here.'),
+      'description' => __('Add your <a href="http://kb.mailchimp.com/integrations/api/about-api-keys" target="_blank">MailChimp API Key</a> here.'),
 			'section' => 'newsletter_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-        // MailChimp List: For the MailChimp list ID.
+    // MailChimp List: For the MailChimp list ID.
 
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[newsletter_list]',
 			'label' => __('MailChimp List ID', 'plasso_textdomain'),
-            'description' => __('Add your <a href="http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id" target="_blank">MailChimp List ID</a> here.'),
+      'description' => __('Add your <a href="http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id" target="_blank">MailChimp List ID</a> here.'),
 			'section' => 'newsletter_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
 		/* The Footer Section
-        -------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------- */
 
 		Kirki::add_section('footer_section', array(
 			'title' => __('Footer', 'plasso_textdomain'),
@@ -449,7 +449,7 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_toggle]',
 			'label' => __('Display', 'plasso_textdomain'),
-            'description' => __('Toggle the footer section on or off.'),
+      'description' => __('Toggle the footer section on or off.'),
 			'section' => 'footer_section',
 			'type' => 'toggle',
 			'priority' => 10,
@@ -460,7 +460,7 @@ function plasso_customizer() {
 		Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_plasso]',
 			'label' => __('Powered by Plasso', 'plasso_textdomain'),
-            'description' => __('Toggle the Powered by Plasso link on or off.'),
+      'description' => __('Toggle the Powered by Plasso link on or off.'),
 			'section' => 'footer_section',
 			'type' => 'toggle',
 			'priority' => 10,
@@ -468,10 +468,10 @@ function plasso_customizer() {
 
 		// Text: The footer text.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_text]',
 			'label' => __('Text', 'plasso_textdomain'),
-            'description' => __('Add some footer text (e.g. “Copyright Bla Bla Bla”).'),
+      'description' => __('Add some footer text (e.g. “Copyright Bla Bla Bla”).'),
 			'section' => 'footer_section',
 			'type' => 'textarea',
 			'priority' => 10,
@@ -479,10 +479,10 @@ function plasso_customizer() {
 
 		// Twitter: The Twitter link.
 
-        Kirki::add_field('plasso_theme', array(
+  	Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_twitter]',
 			'label' => __('Twitter', 'plasso_textdomain'),
-            'description' => __('Enter your Twitter ID to add a Twitter link.'),
+      'description' => __('Enter your Twitter ID to add a Twitter link.'),
 			'section' => 'footer_section',
 			'type' => 'text',
 			'priority' => 10,
@@ -490,10 +490,10 @@ function plasso_customizer() {
 
 		// Facebook: The Facebook link.
 
-        Kirki::add_field('plasso_theme', array(
+    Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_facebook]',
 			'label' => __('Facebook', 'plasso_textdomain'),
-            'description' => __('Enter your Facebook ID to add a Facebook link.'),
+      'description' => __('Enter your Facebook ID to add a Facebook link.'),
 			'section' => 'footer_section',
 			'type' => 'text',
 			'priority' => 10,
@@ -501,17 +501,17 @@ function plasso_customizer() {
 
 		// Instagram: The Instagram link.
 
-        Kirki::add_field('plasso_theme', array(
+  	Kirki::add_field('plasso_theme', array(
 			'settings' => 'plasso[footer_instagram]',
 			'label' => __('Instagram', 'plasso_textdomain'),
-            'description' => __('Enter your Instagram ID to add a Instagram link.'),
+      'description' => __('Enter your Instagram ID to add a Instagram link.'),
 			'section' => 'footer_section',
 			'type' => 'text',
 			'priority' => 10,
 		));
 
-    /* No Kirki? Install it please.
-    ------------------------------------------------------------------------------------------------ */
+  /* No Kirki? Install it please.
+  ------------------------------------------------------------------------------------------------ */
 
 	} else {
 

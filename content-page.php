@@ -2,16 +2,16 @@
 
 <div class="site-content">
 	<div class="content">
-    	<div class="entry-content animated fadeInUp delayed_05s">
-            <?php while(have_posts()) : the_post(); ?>
-            <div class="page">
-    			<h1 class="title"><?php the_title(); ?></h1>
-    			<?php the_content(); ?>
+  	<div class="entry-content animated fadeInUp delayed_05s">
+    	<?php while(have_posts()) : the_post(); ?>
+      <div class="page">
+  			<h1 class="title"><?php the_title(); ?></h1>
+  			<?php the_content(); ?>
 			</div>
-    		<?php endwhile; ?>
-    	</div>
+  		<?php endwhile; ?>
+  	</div>
 
-    	<div class="sidebar animated fadeInUp delayed_075s">
+    <div class="sidebar animated fadeInUp delayed_075s">
 			<?php if(!empty($plasso['intro_title'])) { ?>
 			<h2 class="widget-heading"><?php echo $plasso['intro_title']; ?></h2>
 			<?php } ?>
